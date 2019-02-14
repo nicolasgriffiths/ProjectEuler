@@ -1,0 +1,10 @@
+# Tidy the location of the symlinks created by bazel
+# (though unfortunately won't apply to `bazel-out`
+# https://github.com/bazelbuild/bazel/issues/3796)
+build --symlink_prefix=/
+run --symlink_prefix=/
+test --symlink_prefix=/
+
+# Default to optimised
+build --compilation_mode=opt
+run --compilation_mode=opt

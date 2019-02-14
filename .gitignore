@@ -1,5 +1,6 @@
+bazel-out
+bazel-ProjectEuler
 bazel-bin
 bazel-genfiles
-bazel-out
 bazel-testlogs
-bazel-ProjectEuler
+.DS_Store
