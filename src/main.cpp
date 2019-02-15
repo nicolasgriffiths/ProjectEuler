@@ -10,13 +10,11 @@ using namespace euler;
 
 int main(int argc, char* argv[]) {
   // Parse arguments
-  std::vector<int> challenges;
-  challenges = parseArgs(argc, argv);
+  auto challenges = parseArgs(argc, argv);
 
   // Run challenges
   ChallengeManager manager(challenges);
-  // manager.runChallenges();
-  // manager.printSummary();
+  manager.runChallenges();
 
   return 0;
 }
