@@ -3,8 +3,13 @@
 # https://github.com/bazelbuild/bazel/issues/3796)
 build --symlink_prefix=/
 run --symlink_prefix=/
-test --symlink_prefix=/
+test  --symlink_prefix=/
+
+# Allow http_archive
+build --incompatible_remove_native_http_archive=false
+run --incompatible_remove_native_http_archive=false
+test --incompatible_remove_native_http_archive=false
 
 # Default to optimised
-build --compilation_mode=opt
+build --compilation_mode=opt 
 run --compilation_mode=opt

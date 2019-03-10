@@ -4,7 +4,7 @@
 
 namespace euler {
 
-// Convert c-string to integer and check for invlaid arguments
+// Convert c-string to integer and check for invalid arguments
 int convertToInt(char* s) {
   auto s2 = s;
   while (*s2) {
@@ -14,7 +14,7 @@ int convertToInt(char* s) {
       exit(1);
     }
   }
-  return strtol(s, NULL, 10);
+  return strtol(s, nullptr, 10);
 }
 
 // Parse arguments and return a vector containing the challenges to be executed
