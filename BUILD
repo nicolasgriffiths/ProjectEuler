@@ -4,5 +4,6 @@ cc_binary(
     srcs = glob([
         "src/**/*.hpp",
         "src/**/*.cpp"
-        ])
+        ]),
+    includes = ["src"]
 )
