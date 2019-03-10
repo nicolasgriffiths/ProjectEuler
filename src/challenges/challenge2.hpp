@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include "challenge_interface.hpp"
 
 /*
@@ -15,6 +14,7 @@ class Challenge2 : public ChallengeInterface {
   bool run() const override;
   int getId() const override;
 };
+
 int Challenge2::getSum(const int threshold) {
   auto prev = 1, i = 1;
   auto sum = 0;
