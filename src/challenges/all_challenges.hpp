@@ -1,7 +1,7 @@
 #pragma once
 
-#include "challenges/challenge0.hpp"
+#include "challenges/challenge1.hpp"
 
 namespace euler {
-static std::vector<int> allChallengeIds = {0};
+static std::vector<int> allChallengeIds = {1};
 }

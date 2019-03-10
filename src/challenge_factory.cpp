@@ -8,8 +8,8 @@ namespace euler {
 std::shared_ptr<ChallengeInterface> ChallengeFactory::createChallenge(
     const int challengeId) {
   switch (challengeId) {
-    case 0:
-      return std::make_shared<Challenge0>();
+    case 1:
+      return std::make_shared<Challenge1>();
     default:
       return nullptr;
   }
