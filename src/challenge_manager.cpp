@@ -34,10 +34,9 @@ void ChallengeManager::runChallenges() {
 }
 
 void ChallengeManager::printStartSummary() {
-  std::cout << "Challenges to be executed: " << std::endl;
-  for (auto&& challenge : challenges_)
-    std::cout << challenge->getId() << std::endl;
-  std::cout << std::endl;
+  std::cout << "Challenges to be executed: ";
+  for (auto&& challenge : challenges_) std::cout << challenge->getId() << " ";
+  std::cout << std::endl << std::endl;
 }
 
 void ChallengeManager::printEndSummary() {

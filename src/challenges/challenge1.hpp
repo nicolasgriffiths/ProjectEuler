@@ -1,10 +1,10 @@
 #pragma once
 
 #include <algorithm>
-#include <iostream>
 #include "challenge_interface.hpp"
 
-/* Find the sum of all the multiples of 3 or 5 below 1000
+/*
+ * Find the sum of all the multiples of 3 or 5 below 1000
  * This challenge has been coded thinking of scaling the problem to an arbitrary
  * number of divisors and threshold. This method optimizes by only searching
  * through the numbers it strictly needs
