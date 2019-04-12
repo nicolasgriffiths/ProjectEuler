@@ -14,10 +14,9 @@
  */
 
 namespace euler {
-class Challenge4 : public ChallengeInterface {
+class Challenge4 : public BaseChallenge<4> {
  public:
   bool run() const override;
-  int getId() const override;
 
  private:
   static int findLargestPalindrome(const int maxMultiplier);
@@ -43,7 +42,5 @@ bool Challenge4::isPalindrome(const int num) {
 }
 
 bool Challenge4::run() const { return findLargestPalindrome(999) == 906609; }
-
-int Challenge4::getId() const { return 4; }
 
 }  // namespace euler

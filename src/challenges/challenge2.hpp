@@ -8,10 +8,9 @@
  */
 
 namespace euler {
-class Challenge2 : public ChallengeInterface {
+class Challenge2 : public BaseChallenge<2> {
  public:
   bool run() const override;
-  int getId() const override;
 
  private:
   static int getSum(const int threshold);
@@ -32,7 +31,5 @@ int Challenge2::getSum(const int threshold) {
 }
 
 bool Challenge2::run() const { return getSum(4e6) == 4613732; }
-
-int Challenge2::getId() const { return 2; }
 
 }  // namespace euler

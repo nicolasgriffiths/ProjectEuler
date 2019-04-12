@@ -11,10 +11,9 @@
  */
 
 namespace euler {
-class Challenge5 : public ChallengeInterface {
+class Challenge5 : public BaseChallenge<5> {
  public:
   bool run() const override;
-  int getId() const override;
 
  private:
   static int findSmallestPrime(const int num);
@@ -75,7 +74,5 @@ int Challenge5::getSmallestCommonMultiple(const std::map<int, int>& factors) {
 bool Challenge5::run() const {
   return getSmallestNumberDivisibleUpTo(20) == 232792560;
 }
-
-int Challenge5::getId() const { return 5; }
 
 }  // namespace euler

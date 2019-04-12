@@ -12,4 +12,12 @@ class ChallengeInterface {
   virtual int getId() const = 0;
 };
 
+template <int ID>
+class BaseChallenge : public ChallengeInterface {
+ public:
+  virtual ~BaseChallenge() {}
+  virtual bool run() const = 0;
+  int getId() const { return ID; }
+};
+
 }  // namespace euler

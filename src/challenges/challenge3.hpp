@@ -8,10 +8,9 @@
  */
 
 namespace euler {
-class Challenge3 : public ChallengeInterface {
+BaseChallenge<3> class Challenge3 : public ChallengeInterface {
  public:
   bool run() const override;
-  int getId() const override;
 
  private:
   static int findLargestPrime(const long num);
@@ -36,7 +35,5 @@ int Challenge3::findSmallestPrime(const long num) {
 }
 
 bool Challenge3::run() const { return findLargestPrime(600851475143) == 6857; }
-
-int Challenge3::getId() const { return 3; }
 
 }  // namespace euler
