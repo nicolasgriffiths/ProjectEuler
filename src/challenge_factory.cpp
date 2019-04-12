@@ -20,6 +20,8 @@ std::shared_ptr<ChallengeInterface> ChallengeFactory::createChallenge(
       return std::make_shared<Challenge5>();
     case 6:
       return std::make_shared<Challenge6>();
+    case 7:
+      return std::make_shared<Challenge7>();
     default:
       return nullptr;
   }
