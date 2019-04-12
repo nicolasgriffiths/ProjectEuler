@@ -21,17 +21,16 @@ int Challenge3::findLargestPrime(const long num) {
   long number = num;
   while (true) {
     long smallPrime = findSmallestPrime(number);
-    if (smallPrime < number)
-      number = number / smallPrime;  // result must be integer
-    else
-      return smallPrime;  // Found largest prime
+    if (smallPrime >= number) return smallPrime;  // Found largest prime
+    number = number / smallPrime;                 // result must be integer
   }
 }
 
 int Challenge3::findSmallestPrime(const long num) {
-  for (long i = 2; i < sqrt(num); i++)
-    if ((num % i) == 0) return i;  // Found divisor that is prime
-  return num;                      // The number is prime
+  if (num % 2 == 0) return 2;
+  for (long i = 3; i * i <= num; i += 2)
+    if (num % i == 0) return i;
+  return num;
 }
 
 bool Challenge3::run() const { return findLargestPrime(600851475143) == 6857; }

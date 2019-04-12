@@ -19,7 +19,9 @@ class Challenge4 : public BaseChallenge<4> {
   bool run() const override;
 
  private:
+  // Efficient search of largest palindrome
   static int findLargestPalindrome(const int maxMultiplier);
+  // Return whether a given number is a palindrome or not
   static bool isPalindrome(const int num);
 };
 
