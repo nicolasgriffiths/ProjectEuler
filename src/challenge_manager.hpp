@@ -12,7 +12,7 @@ class ChallengeManager {
   // Build challenge manager with the challenges that want to be run
   explicit ChallengeManager(const std::vector<int>& challengeIds);
   // Run all challenges specified in constructor
-  void runChallenges();
+  bool runChallenges();
 
  private:
   void printStartSummary();

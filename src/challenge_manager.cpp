@@ -22,15 +22,18 @@ ChallengeManager::ChallengeManager(const std::vector<int>& challengeIds)
   }
 }
 
-void ChallengeManager::runChallenges() {
+bool ChallengeManager::runChallenges() {
+  bool globalSuccess = true;
   printStartSummary();
   for (auto&& challenge : challenges_) {
     std::cout << "Challenge " << challenge->getId() << " --> ";
     auto result = challenge->run() ? "SUCCESS" : "FAIL";
+    globalSuccess = globalSuccess && result;
     std::cout << result << std::endl;
   }
   std::cout << std::endl;
   printEndSummary();
+  return globalSuccess;
 }
 
 void ChallengeManager::printStartSummary() {

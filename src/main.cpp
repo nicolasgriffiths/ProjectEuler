@@ -12,9 +12,9 @@ int main(int argc, char* argv[]) {
   // Parse arguments
   auto challenges = parseArgs(argc, argv);
 
-  // Run challenges
+  // Create manager
   ChallengeManager manager(challenges);
-  manager.runChallenges();
 
-  return 0;
+  // Run challenges and return 0 if successful
+  return static_cast<int>(manager.runChallenges() != true);
 }
