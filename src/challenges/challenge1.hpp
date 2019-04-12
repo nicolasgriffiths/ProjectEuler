@@ -15,7 +15,8 @@ class Challenge1 : public ChallengeInterface {
  public:
   bool run() const override;
   int getId() const override;
-private:
+
+ private:
   static int getSum(const std::vector<int> divisors, const int threshold);
   static std::vector<int> getCycle(const std::vector<int> divisors);
 };

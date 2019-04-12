@@ -18,7 +18,8 @@ class Challenge4 : public ChallengeInterface {
  public:
   bool run() const override;
   int getId() const override;
-private:
+
+ private:
   static int findLargestPalindrome(const int maxMultiplier);
   static bool isPalindrome(const int num);
 };

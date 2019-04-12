@@ -12,7 +12,8 @@ class Challenge3 : public ChallengeInterface {
  public:
   bool run() const override;
   int getId() const override;
-private:
+
+ private:
   static int findLargestPrime(const long num);
   static int findSmallestPrime(const long num);
 };

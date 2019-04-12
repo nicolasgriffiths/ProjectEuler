@@ -12,7 +12,8 @@ class Challenge2 : public ChallengeInterface {
  public:
   bool run() const override;
   int getId() const override;
-private:
+
+ private:
   static int getSum(const int threshold);
 };
 
