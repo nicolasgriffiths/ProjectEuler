@@ -17,6 +17,7 @@ class Challenge6 : public BaseChallenge<6> {
   static int getDifference(const int num);
 };
 
+// Mathematically reduced formulas for square of sum minus sum of squares
 int Challenge6::getDifference(const int num) {
   return (3 * (pow(num, 4) - pow(num, 2)) + 2 * (pow(num, 3) - num)) / 12;
 }
