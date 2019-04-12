@@ -13,10 +13,11 @@
 namespace euler {
 class Challenge1 : public ChallengeInterface {
  public:
-  static int getSum(const std::vector<int> divisors, const int threshold);
-  static std::vector<int> getCycle(const std::vector<int> divisors);
   bool run() const override;
   int getId() const override;
+private:
+  static int getSum(const std::vector<int> divisors, const int threshold);
+  static std::vector<int> getCycle(const std::vector<int> divisors);
 };
 
 int Challenge1::getSum(const std::vector<int> divisors, const int threshold) {

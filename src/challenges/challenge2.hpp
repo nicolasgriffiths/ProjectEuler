@@ -10,9 +10,10 @@
 namespace euler {
 class Challenge2 : public ChallengeInterface {
  public:
-  static int getSum(const int threshold);
   bool run() const override;
   int getId() const override;
+private:
+  static int getSum(const int threshold);
 };
 
 int Challenge2::getSum(const int threshold) {

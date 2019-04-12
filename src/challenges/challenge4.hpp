@@ -16,10 +16,11 @@
 namespace euler {
 class Challenge4 : public ChallengeInterface {
  public:
-  static int findLargestPalindrome(const int maxMultiplier);
-  static bool isPalindrome(const int num);
   bool run() const override;
   int getId() const override;
+private:
+  static int findLargestPalindrome(const int maxMultiplier);
+  static bool isPalindrome(const int num);
 };
 
 int Challenge4::findLargestPalindrome(const int maxMultiplier) {

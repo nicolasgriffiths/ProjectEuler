@@ -10,10 +10,11 @@
 namespace euler {
 class Challenge3 : public ChallengeInterface {
  public:
-  static int findLargestPrime(const long num);
-  static int findSmallestPrime(const long num);
   bool run() const override;
   int getId() const override;
+private:
+  static int findLargestPrime(const long num);
+  static int findSmallestPrime(const long num);
 };
 
 int Challenge3::findLargestPrime(const long num) {
