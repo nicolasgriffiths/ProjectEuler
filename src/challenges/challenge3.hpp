@@ -8,7 +8,7 @@
  */
 
 namespace euler {
-BaseChallenge<3> class Challenge3 : public ChallengeInterface {
+class Challenge3 : public BaseChallenge<3> {
  public:
   bool run() const override;
 
