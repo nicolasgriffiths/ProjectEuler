@@ -16,14 +16,17 @@ class Challenge5 : public BaseChallenge<5> {
   bool run() const override;
 
  private:
+  // Finds the smallest prime factor of num
   static int findSmallestPrime(const int num);
-  static int getSmallestNumberDivisibleUpTo(const int num);
+  // Get a map containing all prime factors and how many times each
   static std::map<int, int> getFactors(const int num);
+  // Update the global factors if update factors has new or more times
   static void updateFactors(std::map<int, int>& globalFactors,
                             const std::map<int, int>& updateFactors);
-  static void insertOrUpdateIfNeeded(const std::pair<int, int>& pair,
-                                     std::map<int, int>& factors);
+  // Multiply all factors to get the MCM
   static int getSmallestCommonMultiple(const std::map<int, int>& factors);
+  // Smallest number that is evenly divisible by all natural numbers up to num
+  static int getSmallestNumberDivisibleUpTo(const int num);
 };
 
 int Challenge5::findSmallestPrime(const int num) {
@@ -31,12 +34,6 @@ int Challenge5::findSmallestPrime(const int num) {
   for (int i = 3; i * i <= num; i += 2)
     if (num % i == 0) return i;
   return num;
-}
-
-int Challenge5::getSmallestNumberDivisibleUpTo(const int num) {
-  std::map<int, int> factors{};
-  for (int i = num; i > 1; --i) updateFactors(factors, getFactors(i));
-  return getSmallestCommonMultiple(factors);
 }
 
 std::map<int, int> Challenge5::getFactors(int num) {
@@ -69,6 +66,12 @@ int Challenge5::getSmallestCommonMultiple(const std::map<int, int>& factors) {
   auto num = 1;
   for (const auto& [key, value] : factors) num *= pow(key, value);
   return num;
+}
+
+int Challenge5::getSmallestNumberDivisibleUpTo(const int num) {
+  std::map<int, int> factors{};
+  for (int i = num; i > 1; --i) updateFactors(factors, getFactors(i));
+  return getSmallestCommonMultiple(factors);
 }
 
 bool Challenge5::run() const {
