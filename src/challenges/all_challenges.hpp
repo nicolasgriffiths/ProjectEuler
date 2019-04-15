@@ -7,7 +7,8 @@
 #include "challenges/challenge5.hpp"
 #include "challenges/challenge6.hpp"
 #include "challenges/challenge7.hpp"
+#include "challenges/challenge8.hpp"
 
 namespace euler {
-static std::vector<int> allChallengeIds = {1, 2, 3, 4, 5, 6, 7};
+static std::vector<int> allChallengeIds = {1, 2, 3, 4, 5, 6, 7, 8};
 }
