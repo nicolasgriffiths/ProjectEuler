@@ -16,13 +16,12 @@ class Challenge15 : public BaseChallenge<15> {
   bool run() const override;
 
  private:
-  long findRoutesFrom(const int i, const int j, const int size,
-                      std::map<std::pair<int, int>, long>& cache) const;
-  long findRoutesGrid(const int size) const;
+  static long findRoutesFrom(const int i, const int j, const int size,
+                             std::map<std::pair<int, int>, long>& cache);
+  static long findRoutesGrid(const int size);
 };
-long Challenge15::findRoutesFrom(
-    const int i, const int j, const int size,
-    std::map<std::pair<int, int>, long>& cache) const {
+long Challenge15::findRoutesFrom(const int i, const int j, const int size,
+                                 std::map<std::pair<int, int>, long>& cache) {
   long nRoutes;
   auto it = cache.find(std::pair<int, int>(i, j));
 
@@ -45,7 +44,7 @@ long Challenge15::findRoutesFrom(
   return nRoutes;
 }
 
-long Challenge15::findRoutesGrid(const int size) const {
+long Challenge15::findRoutesGrid(const int size) {
   std::map<std::pair<int, int>, long> cache;
   return findRoutesFrom(0, 0, size, cache);
 }
