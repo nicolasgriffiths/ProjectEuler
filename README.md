@@ -12,7 +12,7 @@ To run a specific challenge, give the numbers of the challenges that want to be 
 
 If no arguments are given, all of the available challenges are run.
 
-Example: `bazel run -- :projectEuler 1 2 3`
+Example: `bazel run :projectEuler -- 1 2 3`
 
 # How to add a challenge
 1. Implement a class under `src/challenges` with the corresponding name.
